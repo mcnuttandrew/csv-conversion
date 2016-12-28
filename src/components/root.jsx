@@ -6,7 +6,8 @@ import Dropzone from 'react-dropzone';
 const STATE_MESSAGES = {
   initial: 'CSV TO JSON COVERTER',
   processing: 'WORKING>>>',
-  complete: 'JOB DONE! FILE DOWNLOADED'
+  complete: 'JOB DONE! FILE DOWNLOADED',
+  error: 'SOMETHING WENT WRONG!'
 }
 
 export default React.createClass({
@@ -41,6 +42,7 @@ export default React.createClass({
     this.setState({dragging: false});
     const file = acceptedFiles[0];
     if (!file) {
+      this.setState({state: 'error'});
       return;
     }
     this.setState({state: 'processing'});
