@@ -1,3 +1,7 @@
+$hover-link-blue: #4a90e2;
+$gray-1: #333;
+$gray-2: #666;
+
 body,
 html,
 .app-root {
@@ -7,9 +11,45 @@ html,
 
 .app {
   align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding: 0 50px;
+  width: auto;
+}
+
+.hidden-link {
+  display: none;
+}
+
+.drop-target {
+  align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
+  width: auto;
+}
+
+.app-dragging .drop-target {
+  border: 10px dashed $gray-1;
+}
+
+.page-title,
+.page-explanation {
+  font-family: RobotoCondensed-Regular;
+  text-align: right;
   width: 100%;
+}
+
+.page-title {
+  color: $gray-1;
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.page-explanation {
+  color: $gray-2;
+  font-size: 64px;
 }
