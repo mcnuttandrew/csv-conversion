@@ -4,9 +4,16 @@ import {csvParse} from 'd3-dsv';
 import Dropzone from 'react-dropzone';
 
 const STATE_MESSAGES = {
-  initial: 'CSV TO JSON COVERTER',
+  initial: 'CSV TO JSON CONVERTER',
   processing: 'WORKING>>>',
   complete: 'JOB DONE! FILE DOWNLOADED',
+  error: 'SOMETHING WENT WRONG!'
+}
+
+const STATE_SUB_MESSAGES = {
+  initial: '(DROP A FILE OR CLICK ANYWHERE TO BEGIN)',
+  processing: '<>><><><><><>',
+  complete: '(DRAG IN A NEW FILE OR CLICK ANYWHERE TO BEGIN AGAIN)',
   error: 'SOMETHING WENT WRONG!'
 }
 
@@ -71,7 +78,7 @@ export default React.createClass({
           onDrop={this.onDrop}
           className="drop-target">
           <div className="page-title">{STATE_MESSAGES[state]}</div>
-          <div className="page-explanation">(DROP A FILE OR CLICK ANYWHERE TO BEGIN)</div>
+          <div className="page-explanation">{STATE_SUB_MESSAGES[state]}</div>
           <a className="hidden-link" ref='hiddenLink'/>
         </Dropzone>
       </div>
