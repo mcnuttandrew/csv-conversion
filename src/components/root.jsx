@@ -17,8 +17,6 @@ const STATE_SUB_MESSAGES = {
   error: 'SOMETHING WENT WRONG!'
 }
 
-import ReactGA from 'react-ga';
-
 export default React.createClass({
   displayName : 'App',
 
@@ -27,13 +25,6 @@ export default React.createClass({
       dragging: false,
       state: 'initial'
     };
-  },
-
-  componentDidMount: function componentDidMount() {
-    ReactGA.event({
-      category: 'CSV2JSON',
-      action: 'Page was loaded'
-    });
   },
 
    _onFileLoad(oldFileName) {

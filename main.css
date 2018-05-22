@@ -1,7 +1,3 @@
-$hover-link-blue: #4a90e2;
-$gray-1: #333;
-$gray-2: #666;
-
 body,
 html,
 .app-root {
@@ -33,7 +29,7 @@ html,
 }
 
 .app-dragging .drop-target {
-  border: 10px dashed $gray-1;
+  border: 10px dashed #333;
 }
 
 .page-title,
@@ -44,12 +40,12 @@ html,
 }
 
 .page-title {
-  color: $gray-1;
+  color: #333;
   font-size: 100px;
   font-weight: 600;
 }
 
 .page-explanation {
-  color: $gray-2;
+  color: #666;
   font-size: 64px;
 }
