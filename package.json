@@ -30,6 +30,6 @@
   },
   "scripts": {
     "start": "gulp serve",
-    "watch-prod": "NODE_ENV=production gulp serve"
+    "build": "NODE_ENV=production gulp"
   }
 }
