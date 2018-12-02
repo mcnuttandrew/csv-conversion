@@ -34,7 +34,7 @@ html,
 
 .page-title,
 .page-explanation {
-  font-family: RobotoCondensed-Regular;
+  font-family: 'Roboto', sans-serif;
   text-align: right;
   width: 100%;
 }
